@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FCA25829-40B9-4811-B96E-37566B9BFFF0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MaterialSheetsDLL</RootNamespace>
+    <AssemblyName>MaterialSheetsDLL</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NewEventLogDLL">
+      <HintPath>..\..\Blue Jay Class Library\NewEventLogDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CreateMaterialSheetDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CreateMaterialSheetDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindInventoryLocationByLocationDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindInventoryLocationByLocationDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindInventoryLocationByPartIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindInventoryLocationByPartIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindInventoryLocationByWarehouseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindInventoryLocationByWarehouseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindMaterialSheetByPartIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindMaterialSheetByPartIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindMaterialSheetEntryByPartIDSheetIDWarehouseIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindMaterialSheetEntryByPartIDSheetIDWarehouseIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindMaterialSheetsByEmployeeIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindMaterialSheetsByEmployeeIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindMaterialSheetTypeBySheetTypeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindMaterialSheetTypeBySheetTypeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindMaterialSheetTypeBySheetTypeIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindMaterialSheetTypeBySheetTypeIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindSortedMaterialSheetTypesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindSortedMaterialSheetTypesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertInventoryLocationEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertInventoryLocationEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertMaterialSheetEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertMaterialSheetEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertMaterialSheetTypeEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertMaterialSheetTypeEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryLocationDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventoryLocationDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialSheetClass.cs" />
+    <Compile Include="MaterialSheetsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MaterialSheetsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialSheetTypesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MaterialSheetTypesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveInventoryLocationEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RemoveInventoryLocationEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateInventoryLocationEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateInventoryLocationEntry.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="CreateMaterialSheetDataSet.xsc">
+      <DependentUpon>CreateMaterialSheetDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CreateMaterialSheetDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CreateMaterialSheetDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CreateMaterialSheetDataSet.xss">
+      <DependentUpon>CreateMaterialSheetDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindInventoryLocationByLocationDataSet.xsc">
+      <DependentUpon>FindInventoryLocationByLocationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindInventoryLocationByLocationDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindInventoryLocationByLocationDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindInventoryLocationByLocationDataSet.xss">
+      <DependentUpon>FindInventoryLocationByLocationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindInventoryLocationByPartIDDataSet.xsc">
+      <DependentUpon>FindInventoryLocationByPartIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindInventoryLocationByPartIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindInventoryLocationByPartIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindInventoryLocationByPartIDDataSet.xss">
+      <DependentUpon>FindInventoryLocationByPartIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindInventoryLocationByWarehouseDataSet.xsc">
+      <DependentUpon>FindInventoryLocationByWarehouseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindInventoryLocationByWarehouseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindInventoryLocationByWarehouseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindInventoryLocationByWarehouseDataSet.xss">
+      <DependentUpon>FindInventoryLocationByWarehouseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindMaterialSheetByPartIDDataSet.xsc">
+      <DependentUpon>FindMaterialSheetByPartIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindMaterialSheetByPartIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindMaterialSheetByPartIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindMaterialSheetByPartIDDataSet.xss">
+      <DependentUpon>FindMaterialSheetByPartIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindMaterialSheetEntryByPartIDSheetIDWarehouseIDDataSet.xsc">
+      <DependentUpon>FindMaterialSheetEntryByPartIDSheetIDWarehouseIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindMaterialSheetEntryByPartIDSheetIDWarehouseIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindMaterialSheetEntryByPartIDSheetIDWarehouseIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindMaterialSheetEntryByPartIDSheetIDWarehouseIDDataSet.xss">
+      <DependentUpon>FindMaterialSheetEntryByPartIDSheetIDWarehouseIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindMaterialSheetsByEmployeeIDDataSet.xsc">
+      <DependentUpon>FindMaterialSheetsByEmployeeIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindMaterialSheetsByEmployeeIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindMaterialSheetsByEmployeeIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindMaterialSheetsByEmployeeIDDataSet.xss">
+      <DependentUpon>FindMaterialSheetsByEmployeeIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindMaterialSheetTypeBySheetTypeDataSet.xsc">
+      <DependentUpon>FindMaterialSheetTypeBySheetTypeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindMaterialSheetTypeBySheetTypeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindMaterialSheetTypeBySheetTypeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindMaterialSheetTypeBySheetTypeDataSet.xss">
+      <DependentUpon>FindMaterialSheetTypeBySheetTypeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindMaterialSheetTypeBySheetTypeIDDataSet.xsc">
+      <DependentUpon>FindMaterialSheetTypeBySheetTypeIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindMaterialSheetTypeBySheetTypeIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindMaterialSheetTypeBySheetTypeIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindMaterialSheetTypeBySheetTypeIDDataSet.xss">
+      <DependentUpon>FindMaterialSheetTypeBySheetTypeIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSortedMaterialSheetTypesDataSet.xsc">
+      <DependentUpon>FindSortedMaterialSheetTypesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSortedMaterialSheetTypesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindSortedMaterialSheetTypesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindSortedMaterialSheetTypesDataSet.xss">
+      <DependentUpon>FindSortedMaterialSheetTypesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InsertInventoryLocationEntry.xsc">
+      <DependentUpon>InsertInventoryLocationEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertInventoryLocationEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertInventoryLocationEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertInventoryLocationEntry.xss">
+      <DependentUpon>InsertInventoryLocationEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertMaterialSheetEntry.xsc">
+      <DependentUpon>InsertMaterialSheetEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertMaterialSheetEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertMaterialSheetEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertMaterialSheetEntry.xss">
+      <DependentUpon>InsertMaterialSheetEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertMaterialSheetTypeEntry.xsc">
+      <DependentUpon>InsertMaterialSheetTypeEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertMaterialSheetTypeEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertMaterialSheetTypeEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertMaterialSheetTypeEntry.xss">
+      <DependentUpon>InsertMaterialSheetTypeEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InventoryLocationDataSet.xsc">
+      <DependentUpon>InventoryLocationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InventoryLocationDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InventoryLocationDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InventoryLocationDataSet.xss">
+      <DependentUpon>InventoryLocationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MaterialSheetsDataSet.xsc">
+      <DependentUpon>MaterialSheetsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MaterialSheetsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MaterialSheetsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MaterialSheetsDataSet.xss">
+      <DependentUpon>MaterialSheetsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MaterialSheetTypesDataSet.xsc">
+      <DependentUpon>MaterialSheetTypesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MaterialSheetTypesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MaterialSheetTypesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MaterialSheetTypesDataSet.xss">
+      <DependentUpon>MaterialSheetTypesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="RemoveInventoryLocationEntry.xsc">
+      <DependentUpon>RemoveInventoryLocationEntry.xsd</DependentUpon>
+    </None>
+    <None Include="RemoveInventoryLocationEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RemoveInventoryLocationEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RemoveInventoryLocationEntry.xss">
+      <DependentUpon>RemoveInventoryLocationEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateInventoryLocationEntry.xsc">
+      <DependentUpon>UpdateInventoryLocationEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateInventoryLocationEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateInventoryLocationEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateInventoryLocationEntry.xss">
+      <DependentUpon>UpdateInventoryLocationEntry.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

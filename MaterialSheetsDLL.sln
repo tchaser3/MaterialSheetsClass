@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaterialSheetsDLL", "MaterialSheetsDLL\MaterialSheetsDLL.csproj", "{FCA25829-40B9-4811-B96E-37566B9BFFF0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FCA25829-40B9-4811-B96E-37566B9BFFF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCA25829-40B9-4811-B96E-37566B9BFFF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCA25829-40B9-4811-B96E-37566B9BFFF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCA25829-40B9-4811-B96E-37566B9BFFF0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {623E1699-8127-4DD4-B773-D6ACE0DF2CF7}
+	EndGlobalSection
+EndGlobal
