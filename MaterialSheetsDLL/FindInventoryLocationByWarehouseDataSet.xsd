@@ -25,7 +25,7 @@
               <Mapping SourceColumn="TransactionID" DataSetColumn="TransactionID" />
               <Mapping SourceColumn="PartID" DataSetColumn="PartID" />
               <Mapping SourceColumn="PartDescription" DataSetColumn="PartDescription" />
-              <Mapping SourceColumn="PartPrice" DataSetColumn="PartPrice" />
+              <Mapping SourceColumn="Price" DataSetColumn="Price" />
               <Mapping SourceColumn="FirstName" DataSetColumn="FirstName" />
               <Mapping SourceColumn="LastName" DataSetColumn="LastName" />
               <Mapping SourceColumn="PartLocation" DataSetColumn="PartLocation" />
@@ -48,11 +48,11 @@
               <xs:element name="PartDescription" msprop:Generator_ColumnVarNameInTable="columnPartDescription" msprop:Generator_ColumnPropNameInRow="PartDescription" msprop:Generator_ColumnPropNameInTable="PartDescriptionColumn" msprop:Generator_UserColumnName="PartDescription">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="1" />
+                    <xs:maxLength value="2147483647" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="PartPrice" msprop:Generator_ColumnVarNameInTable="columnPartPrice" msprop:Generator_ColumnPropNameInRow="PartPrice" msprop:Generator_ColumnPropNameInTable="PartPriceColumn" msprop:Generator_UserColumnName="PartPrice" type="xs:decimal" />
+              <xs:element name="Price" msprop:Generator_ColumnVarNameInTable="columnPrice" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnPropNameInTable="PriceColumn" msprop:Generator_UserColumnName="Price" type="xs:double" />
               <xs:element name="FirstName" msprop:Generator_ColumnVarNameInTable="columnFirstName" msprop:Generator_ColumnPropNameInRow="FirstName" msprop:Generator_ColumnPropNameInTable="FirstNameColumn" msprop:Generator_UserColumnName="FirstName">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">

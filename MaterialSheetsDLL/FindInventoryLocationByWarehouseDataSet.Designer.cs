@@ -285,7 +285,7 @@ namespace MaterialSheetsDLL {
             
             private global::System.Data.DataColumn columnPartDescription;
             
-            private global::System.Data.DataColumn columnPartPrice;
+            private global::System.Data.DataColumn columnPrice;
             
             private global::System.Data.DataColumn columnFirstName;
             
@@ -352,9 +352,9 @@ namespace MaterialSheetsDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn PartPriceColumn {
+            public global::System.Data.DataColumn PriceColumn {
                 get {
-                    return this.columnPartPrice;
+                    return this.columnPrice;
                 }
             }
             
@@ -419,13 +419,13 @@ namespace MaterialSheetsDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindInventoryLocationByWarehouseRow AddFindInventoryLocationByWarehouseRow(int PartID, string PartDescription, decimal PartPrice, string FirstName, string LastName, string PartLocation) {
+            public FindInventoryLocationByWarehouseRow AddFindInventoryLocationByWarehouseRow(int PartID, string PartDescription, double Price, string FirstName, string LastName, string PartLocation) {
                 FindInventoryLocationByWarehouseRow rowFindInventoryLocationByWarehouseRow = ((FindInventoryLocationByWarehouseRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         PartID,
                         PartDescription,
-                        PartPrice,
+                        Price,
                         FirstName,
                         LastName,
                         PartLocation};
@@ -461,7 +461,7 @@ namespace MaterialSheetsDLL {
                 this.columnTransactionID = base.Columns["TransactionID"];
                 this.columnPartID = base.Columns["PartID"];
                 this.columnPartDescription = base.Columns["PartDescription"];
-                this.columnPartPrice = base.Columns["PartPrice"];
+                this.columnPrice = base.Columns["Price"];
                 this.columnFirstName = base.Columns["FirstName"];
                 this.columnLastName = base.Columns["LastName"];
                 this.columnPartLocation = base.Columns["PartLocation"];
@@ -476,8 +476,8 @@ namespace MaterialSheetsDLL {
                 base.Columns.Add(this.columnPartID);
                 this.columnPartDescription = new global::System.Data.DataColumn("PartDescription", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPartDescription);
-                this.columnPartPrice = new global::System.Data.DataColumn("PartPrice", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPartPrice);
+                this.columnPrice = new global::System.Data.DataColumn("Price", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPrice);
                 this.columnFirstName = new global::System.Data.DataColumn("FirstName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFirstName);
                 this.columnLastName = new global::System.Data.DataColumn("LastName", typeof(string), null, global::System.Data.MappingType.Element);
@@ -492,8 +492,8 @@ namespace MaterialSheetsDLL {
                 this.columnTransactionID.Unique = true;
                 this.columnPartID.AllowDBNull = false;
                 this.columnPartDescription.AllowDBNull = false;
-                this.columnPartDescription.MaxLength = 1;
-                this.columnPartPrice.AllowDBNull = false;
+                this.columnPartDescription.MaxLength = 2147483647;
+                this.columnPrice.AllowDBNull = false;
                 this.columnFirstName.AllowDBNull = false;
                 this.columnFirstName.MaxLength = 2147483647;
                 this.columnLastName.AllowDBNull = false;
@@ -675,12 +675,12 @@ namespace MaterialSheetsDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public decimal PartPrice {
+            public double Price {
                 get {
-                    return ((decimal)(this[this.tableFindInventoryLocationByWarehouse.PartPriceColumn]));
+                    return ((double)(this[this.tableFindInventoryLocationByWarehouse.PriceColumn]));
                 }
                 set {
-                    this[this.tableFindInventoryLocationByWarehouse.PartPriceColumn] = value;
+                    this[this.tableFindInventoryLocationByWarehouse.PriceColumn] = value;
                 }
             }
             
@@ -880,7 +880,7 @@ namespace MaterialSheetsDLL.FindInventoryLocationByWarehouseDataSetTableAdapters
             tableMapping.ColumnMappings.Add("TransactionID", "TransactionID");
             tableMapping.ColumnMappings.Add("PartID", "PartID");
             tableMapping.ColumnMappings.Add("PartDescription", "PartDescription");
-            tableMapping.ColumnMappings.Add("PartPrice", "PartPrice");
+            tableMapping.ColumnMappings.Add("Price", "Price");
             tableMapping.ColumnMappings.Add("FirstName", "FirstName");
             tableMapping.ColumnMappings.Add("LastName", "LastName");
             tableMapping.ColumnMappings.Add("PartLocation", "PartLocation");

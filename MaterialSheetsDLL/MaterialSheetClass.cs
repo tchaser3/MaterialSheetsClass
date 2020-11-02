@@ -142,7 +142,7 @@ namespace MaterialSheetsDLL
             {
                 TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Material Sheets Class // Update Inventory Location " + Ex.Message);
 
-                blnFatalError = true
+                blnFatalError = true;
             }
 
             return blnFatalError;
@@ -318,7 +318,7 @@ namespace MaterialSheetsDLL
             {
                 aFindMaterialSheetTypeBySheetTypeDataSet = new FindMaterialSheetTypeBySheetTypeDataSet();
                 aFindMaterialSheetTypeBySheetTypeTableAdapter = new FindMaterialSheetTypeBySheetTypeDataSetTableAdapters.FindMaterialSheetTypeBySheetTypeTableAdapter();
-                aFindMaterialSheetTypeBySheetTypeTableAdapter.Fill(aFindMaterialSheetTypeBySheetTypeDataSet.FindMaterialSheetTypeBySheetType, strSheetType):
+                aFindMaterialSheetTypeBySheetTypeTableAdapter.Fill(aFindMaterialSheetTypeBySheetTypeDataSet.FindMaterialSheetTypeBySheetType, strSheetType);
             }
             catch(Exception Ex)
             {
@@ -333,7 +333,7 @@ namespace MaterialSheetsDLL
             {
                 aFindSortedMaterialSheetTypesDataSet = new FindSortedMaterialSheetTypesDataSet();
                 aFindSortedMaterialSheetTypesTableAdapter = new FindSortedMaterialSheetTypesDataSetTableAdapters.FindSortedMaterialSheetTypesTableAdapter();
-                aFindSortedMaterialSheetTypesTableAdapter.Fill(aFindSortedMaterialSheetTypesDataSet.FindSortedMaterialSheetTypes):
+                aFindSortedMaterialSheetTypesTableAdapter.Fill(aFindSortedMaterialSheetTypesDataSet.FindSortedMaterialSheetTypes);
             }
             catch (Exception Ex)
             {

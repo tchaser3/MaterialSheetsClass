@@ -419,11 +419,11 @@ namespace MaterialSheetsDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindInventoryLocationByLocationRow AddFindInventoryLocationByLocationRow(string PartDescription, string FirstName, string LastName, System.DateTime CreatedDate, string PartLocation) {
+            public FindInventoryLocationByLocationRow AddFindInventoryLocationByLocationRow(int PartID, string PartDescription, string FirstName, string LastName, System.DateTime CreatedDate, string PartLocation) {
                 FindInventoryLocationByLocationRow rowFindInventoryLocationByLocationRow = ((FindInventoryLocationByLocationRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        null,
+                        PartID,
                         PartDescription,
                         FirstName,
                         LastName,
@@ -480,11 +480,9 @@ namespace MaterialSheetsDLL {
                 this.columnTransactionID.AutoIncrement = true;
                 this.columnTransactionID.AllowDBNull = false;
                 this.columnTransactionID.ReadOnly = true;
-                this.columnPartID.AutoIncrement = true;
                 this.columnPartID.AllowDBNull = false;
-                this.columnPartID.ReadOnly = true;
                 this.columnPartDescription.AllowDBNull = false;
-                this.columnPartDescription.MaxLength = 1;
+                this.columnPartDescription.MaxLength = 2147483647;
                 this.columnFirstName.AllowDBNull = false;
                 this.columnFirstName.MaxLength = 2147483647;
                 this.columnLastName.AllowDBNull = false;

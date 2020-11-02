@@ -45,11 +45,11 @@
           <xs:complexType>
             <xs:sequence>
               <xs:element name="TransactionID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnTransactionID" msprop:Generator_ColumnPropNameInRow="TransactionID" msprop:Generator_ColumnPropNameInTable="TransactionIDColumn" msprop:Generator_UserColumnName="TransactionID" type="xs:int" />
-              <xs:element name="PartID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnPartID" msprop:Generator_ColumnPropNameInRow="PartID" msprop:Generator_ColumnPropNameInTable="PartIDColumn" msprop:Generator_UserColumnName="PartID" type="xs:int" />
+              <xs:element name="PartID" msprop:Generator_ColumnVarNameInTable="columnPartID" msprop:Generator_ColumnPropNameInRow="PartID" msprop:Generator_ColumnPropNameInTable="PartIDColumn" msprop:Generator_UserColumnName="PartID" type="xs:int" />
               <xs:element name="PartDescription" msprop:Generator_ColumnVarNameInTable="columnPartDescription" msprop:Generator_ColumnPropNameInRow="PartDescription" msprop:Generator_ColumnPropNameInTable="PartDescriptionColumn" msprop:Generator_UserColumnName="PartDescription">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="1" />
+                    <xs:maxLength value="2147483647" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
